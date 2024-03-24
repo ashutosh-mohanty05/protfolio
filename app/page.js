@@ -84,7 +84,7 @@ export default function Home() {
             style={{ fontSize: '2em', display: 'inline-block' }}
             repeat={Infinity}
           /></h3>
-          <p className="text-md py-3 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-white">Freelancer providing services for programming and design needs. Join me down below and let`&apos;`s get cracking!</p>
+          <p className="text-md py-3 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-white">Freelancer providing services for programming and design needs. Join me down below and let&apos;s get cracking!</p>
         </div>
         <div className="text-5xl flex justify-center gap-16 py-2 text-gray-600 dark:text-white">
           <AiFillTwitterCircle onClick={handletwitterClick} className="cursor-pointer" />
