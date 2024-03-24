@@ -1,113 +1,230 @@
+"use client"
+import { BsFillMoonStarsFill } from "react-icons/bs";
+import { AiFillTwitterCircle, AiFillLinkedin, AiFillGithub } from "react-icons/ai"
 import Image from "next/image";
+import { TypeAnimation } from 'react-type-animation';
+import React from "react";
+import { useState , useEffect } from "react";
 
 export default function Home() {
+    const [darkMode, setDarkMode] = useState(false)
+    const handleResumeClick =()=>{
+      window.open("ASHUTOSH MOHANTY.pdf","")
+    }
+    const handleproj2Click =()=>{
+      window.location.href="https://github.com/ashutosh-mohanty05/brandpage.git"
+    }
+    const handlegithubClick =()=>{
+      window.location.href="https://github.com/ashutosh-mohanty05"
+    }
+    const handlelinkedinClick =()=>{
+      window.location.href="https://www.linkedin.com/in/ashutosh-mohanty-674392217?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+    }
+    const handletwitterClick =()=>{
+      window.location.href="https://twitter.com/iashu05?t=2YpXVDN2XigbulhFlabn2A&s=08"
+    }
+    const handleproj1Click =()=>{
+      window.location.href="https://chatogram.onrender.com/"
+    }
+    const handleproj3Click =()=>{
+      window.location.href="https://github.com/ashutosh-mohanty05/react-todo.git"
+    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
+  const [isVisible, setIsVisible] = useState(false);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+  useEffect(()=>{
+    const toggleVisibility=()=>{
+      setIsVisible(window.pageYOffset > 300); 
+    }
+    window.addEventListener('scroll',toggleVisibility)
+
+  return ()=>{
+    window.removeEventListener('scroll',toggleVisibility)
+  }
+    },[])
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+   <div className={darkMode ? 'dark':""}>
+    <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
+      
+      <section className="min-h-screen">
+        <nav className="py-10 mb-12 flex justify-between">
+          <h1 className="text-xl font-burtons dark:text-white">ASHUTOSH</h1>
+          <ul className="flex items-center">
+            <li>
+              <BsFillMoonStarsFill onClick={()=>{
+                setDarkMode(!darkMode)
+              }} className="cursor-pointer dark:text-white" />
+            </li>
+            <li onClick={handleResumeClick} className="hover:scale-90"><a className="bg-gadient-to-r from-cyan-500 to-teal-500 text-white bg-cyan-500 px-4 py-2 rounded-md ml-8 hover:bg-cyan-400" href="#">Resume</a></li>
+          </ul>
+        </nav>
+        <div className="text-center p-10 dark:text-white">
+          <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">Ashutosh Mohanty</h2>
+          <h3 className="text py-2 md:text-xl"> <TypeAnimation
+            sequence={[
+              // Same substring at the start will only be typed out once, initially
+              'Frontend Developer',
+              1000, // wait 1s before replacing "Mice" with "Hamsters"
+              'Web Developer',
+              1000,
+              'React Developer',
+              1000,
+
+            ]}
+            wrapper="span"
+            speed={50}
+            style={{ fontSize: '2em', display: 'inline-block' }}
+            repeat={Infinity}
+          /></h3>
+          <p className="text-md py-3 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-white">Freelancer providing services for programming and design needs. Join me down below and let`&apos;`s get cracking!</p>
+        </div>
+        <div className="text-5xl flex justify-center gap-16 py-2 text-gray-600 dark:text-white">
+          <AiFillTwitterCircle onClick={handletwitterClick} className="cursor-pointer" />
+          <AiFillLinkedin onClick={handlelinkedinClick} className="cursor-pointer"/>
+          <AiFillGithub onClick={handlegithubClick} className="cursor-pointer"/>
+        </div>
+        <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96 ">
+          <Image src={"/profile.png"} alt="" layout="fill" objectFit="cover" />
+        </div>
+      </section>
+      <section>
+        <div>
+          <h3 className="text-2xl py-1 dark:text-white">What Can I Add ?</h3>
+          <p className="text-sm py-2 leading-8 text-gray-800 dark:text-white ">
+            I can bring a strong foundation in building interactive and visually appealing user interfaces. My Experties extends to utilizing <span className="text-teal-500">React.js</span> for frontend development and integrating it seamlessly with <span className="text-teal-500">MongoDB</span>,<span className="text-teal-500">Express.JS</span> and <span className="text-teal-500">Node.js</span> on the backend.
+          </p>
+        </div>
+        <div className="lg:flex gap-10">
+          <div className="text-center shadow-lg p-10 rounded-xl hover:translate-y-2 dark:bg-white">
+            <Image src={"/react.png"} alt="" width={100} height={100} className="rounded-2xl m-auto relative overflow-hidden" />
+            <h6 className="text-lg font-medium pt-8 pb-2">Beautiful UI with React</h6>
+            <p className="text-sm text-gray-600">Proficient in building dynamic, responsive UIs with clean, optimized code. Focused on delivering exceptional user experiences.</p>
+          </div>
+          <div className="text-center shadow-lg p-10 rounded-xl hover:translate-y-2 dark:bg-white">
+            <Image src={"/next.svg"} alt="" width={100} height={100} className="rounded-2xl m-auto relative overflow-hidden " />
+            <h6 className="text-lg font-medium pt-8 pb-2">Next.js 13 Utilization</h6>
+            <p className="text-sm text-gray-600">Route and component with next.js combined with efficient code design for seamless deployment and intuitive user experience.</p>
+          </div>
+          <div className="text-center shadow-lg p-10 rounded-xl hover:translate-y-2 dark:bg-white">
+            <Image src={"/hash.svg"} alt="" width={100} height={100} className="rounded-2xl m-auto relative overflow-hidden" />
+            <h6 className="text-lg font-medium pt-8 pb-2">Custom Code and Deploy</h6>
+            <p className="text-sm text-gray-600">Streamlined, scalable code architecture designed for ease of deployment and efficient management.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <h3 className="text-2xl py-5 dark:text-white">Projects</h3>
+          <div className="flex justify-center gap-10">
+            <div onClick={handleproj1Click} className="text-center shadow-lg p-5 rounded-xl hover:translate-y-2 relative dark:bg-white cursor-pointer ">
+              <Image src={"/chattugram.png"} alt="" width={100} height={100} className="rounded-2xl m-auto relative overflow-hidden hover:scale-110 opacity-100 hover:opacity-75 transition-opacity duration-300 w-full h-auto  " />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-teal-100 bg-opacity-50 text-center">
+                <p className="text-sm font-bold">Chat-app</p>
+              </div>
+            </div>
+
+            <div onClick={handleproj2Click} className="text-center shadow-lg p-5 rounded-xl hover:translate-y-2 relative dark:bg-white cursor-pointer">
+            
+              <Image src={"/brandpage.png"} alt="" width={100} height={100} className="rounded-2xl m-auto relative overflow-hidden hover:scale-110 opacity-100 hover:opacity-75 transition-opacity duration-300 w-full h-auto " />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-teal-100 bg-opacity-50 text-center">
+                <h3 className="font-bold text-sm">Brand Page</h3>
+               
+              </div>
+            </div>
+            <div onClick={handleproj3Click} className="text-center shadow-lg p-5 rounded-xl hover:translate-y-2 relative dark:bg-white cursor-pointer">
+              <Image src={"/Todo.png"} alt="" width={100} height={100} className="rounded-2xl m-auto relative overflow-hidden hover:scale-110 opacity-100 hover:opacity-75 transition-opacity duration-300 w-full h-auto" />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-teal-100 bg-opacity-50 text-center">
+                <p className="text-sm font-bold">Todo-list</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <div className="max-w-md mx-auto p-10 ">
+        <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+          <div className="mb-4">
+            <h2 className="text-2xl font-bold mb-4">Connect with me</h2>
+            <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+              <div className="mb-4">
+                <label htmlFor="fullName" className="block text-gray-700 font-bold mb-2">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+
+              <div className="mb-4">
+                <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+
+              <div className="mb-6">
+                <label htmlFor="message" className="block text-gray-700 font-bold mb-2">
+                  Share Your Queries
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  placeholder="Leave a message..."
+                  required
+                ></textarea>
+              </div>
+
+              <div className="flex items-center justify-between">
+                <button
+                  type="submit"
+                  className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
+     
+      <button
+      className={`${
+        isVisible ? 'block':'hidden'
+      }fixed bottom-10 right-1/2 -translate-x-1/2 bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none`}
+      onClick={scrollToTop}
+      >
+        ^
+      </button>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
+    </div>
   );
-}
+};
