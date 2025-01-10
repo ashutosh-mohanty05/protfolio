@@ -71,11 +71,11 @@ export default function Home() {
           <h3 className="text py-2 md:text-xl"> <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed out once, initially
-              'Frontend Developer',
+              'Engineer-Cloud and Infra',
               1000, // wait 1s before replacing "Mice" with "Hamsters"
               'Web Developer',
               1000,
-              'React Developer',
+              'Amazon Web Service',
               1000,
 
             ]}
