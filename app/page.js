@@ -126,7 +126,7 @@ export default function Home() {
           <h3 className="text-2xl py-5 dark:text-white">Projects</h3>
           <div className="flex justify-center gap-10">
             <div onClick={handleproj1Click} className="text-center shadow-lg p-5 rounded-xl hover:translate-y-2 relative dark:bg-white cursor-pointer ">
-              <Image src={"/chattugram.PNG"} alt="" width={100} height={100} className="rounded-2xl m-auto relative overflow-hidden hover:scale-110 opacity-100 hover:opacity-75 transition-opacity duration-300 w-full h-auto  " />
+              <Image src={"/jobzee.jpg"} alt="" width={100} height={100} className="rounded-2xl m-auto relative overflow-hidden hover:scale-110 opacity-100 hover:opacity-75 transition-opacity duration-300 w-full h-auto  " />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-teal-100 bg-opacity-50 text-center">
                 <p className="text-sm font-bold">JobZee</p>
               </div>
@@ -134,14 +134,14 @@ export default function Home() {
 
             <div onClick={handleproj2Click} className="text-center shadow-lg p-5 rounded-xl hover:translate-y-2 relative dark:bg-white cursor-pointer">
             
-              <Image src={"/brandpage.png"} alt="" width={100} height={100} className="rounded-2xl m-auto relative overflow-hidden hover:scale-110 opacity-100 hover:opacity-75 transition-opacity duration-300 w-full h-auto " />
+              <Image src={"/doc-on-call"} alt="" width={100} height={100} className="rounded-2xl m-auto relative overflow-hidden hover:scale-110 opacity-100 hover:opacity-75 transition-opacity duration-300 w-full h-auto " />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-teal-100 bg-opacity-50 text-center">
                 <h3 className="font-bold text-sm">Doctor</h3>
                
               </div>
             </div>
             <div onClick={handleproj3Click} className="text-center shadow-lg p-5 rounded-xl hover:translate-y-2 relative dark:bg-white cursor-pointer">
-              <Image src={"/Todo.PNG"} alt="" width={100} height={100} className="rounded-2xl m-auto relative overflow-hidden hover:scale-110 opacity-100 hover:opacity-75 transition-opacity duration-300 w-full h-auto" />
+              <Image src={"/restro.PNG"} alt="" width={100} height={100} className="rounded-2xl m-auto relative overflow-hidden hover:scale-110 opacity-100 hover:opacity-75 transition-opacity duration-300 w-full h-auto" />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-teal-100 bg-opacity-50 text-center">
                 <p className="text-sm font-bold">Restro</p>
               </div>
