@@ -12,7 +12,7 @@ export default function Home() {
       window.open("ASHUTOSH MOHANTY.pdf","")
     }
     const handleproj2Click =()=>{
-      window.location.href="https://github.com/ashutosh-mohanty05/brandpage.git"
+      window.location.href="https://on-demand-doctor.netlify.app/"
     }
     const handlegithubClick =()=>{
       window.location.href="https://github.com/ashutosh-mohanty05"
@@ -24,10 +24,10 @@ export default function Home() {
       window.location.href="https://twitter.com/iashu05?t=2YpXVDN2XigbulhFlabn2A&s=08"
     }
     const handleproj1Click =()=>{
-      window.location.href="https://chatogram.onrender.com/"
+      window.location.href="https://jobzeein.netlify.app/"
     }
     const handleproj3Click =()=>{
-      window.location.href="https://github.com/ashutosh-mohanty05/react-todo.git"
+      window.location.href="https://restaurant-reserve-mern-git-main-ashutoshs-projects-dfbbbd9c.vercel.app/"
     }
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -128,7 +128,7 @@ export default function Home() {
             <div onClick={handleproj1Click} className="text-center shadow-lg p-5 rounded-xl hover:translate-y-2 relative dark:bg-white cursor-pointer ">
               <Image src={"/chattugram.PNG"} alt="" width={100} height={100} className="rounded-2xl m-auto relative overflow-hidden hover:scale-110 opacity-100 hover:opacity-75 transition-opacity duration-300 w-full h-auto  " />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-teal-100 bg-opacity-50 text-center">
-                <p className="text-sm font-bold">Chat-app</p>
+                <p className="text-sm font-bold">JobZee</p>
               </div>
             </div>
 
@@ -136,14 +136,14 @@ export default function Home() {
             
               <Image src={"/brandpage.png"} alt="" width={100} height={100} className="rounded-2xl m-auto relative overflow-hidden hover:scale-110 opacity-100 hover:opacity-75 transition-opacity duration-300 w-full h-auto " />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-teal-100 bg-opacity-50 text-center">
-                <h3 className="font-bold text-sm">Brand Page</h3>
+                <h3 className="font-bold text-sm">Doctor</h3>
                
               </div>
             </div>
             <div onClick={handleproj3Click} className="text-center shadow-lg p-5 rounded-xl hover:translate-y-2 relative dark:bg-white cursor-pointer">
               <Image src={"/Todo.PNG"} alt="" width={100} height={100} className="rounded-2xl m-auto relative overflow-hidden hover:scale-110 opacity-100 hover:opacity-75 transition-opacity duration-300 w-full h-auto" />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-teal-100 bg-opacity-50 text-center">
-                <p className="text-sm font-bold">Todo-list</p>
+                <p className="text-sm font-bold">Restro</p>
               </div>
             </div>
           </div>
