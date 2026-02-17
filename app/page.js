@@ -10,7 +10,8 @@ import { useState , useEffect } from "react";
 export default function Home() {
     const [darkMode, setDarkMode] = useState(false)
     const handleResumeClick =()=>{
-      window.open("ASHUTOSH MOHANTY.pdf","")
+   window.open("/ASHUTOSH MOHANTY.pdf","_blank")
+        
     }
     const handleproj2Click =()=>{
       window.location.href="https://on-demand-doctor.netlify.app/"
@@ -30,9 +31,7 @@ export default function Home() {
     const handleproj3Click =()=>{
       window.location.href="https://restaurant-reserve-mern-git-main-ashutoshs-projects-dfbbbd9c.vercel.app/"
     }
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  }
+  
   const [isVisible, setIsVisible] = useState(false);
 
   const scrollToTop = () => {
@@ -98,7 +97,12 @@ AWS Engineer with hands-on experience in cloud infrastructure, monitoring and tr
           <AiFillGithub onClick={handlegithubClick} className="cursor-pointer"/>
         </div>
         <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96 ">
-          <Image src={"/profile.png"} alt="" layout="fill" objectFit="cover" />
+          <Image
+  src="/profile.png"
+  alt="profile"
+  fill
+  style={{ objectFit: "cover" }}
+/>
         </div>
       </section>
       <section>
@@ -201,7 +205,12 @@ I also have experience with <span className="text-teal-500">Linux</span>, <span 
         <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <div className="mb-4">
             <h2 className="text-2xl font-bold mb-4">Connect with me</h2>
-            <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+            <form 
+  action="https://formspree.io/f/mykdjvrq" 
+  method="POST" 
+  className="max-w-md mx-auto"
+>
+
               <div className="mb-4">
                 <label htmlFor="fullName" className="block text-gray-700 font-bold mb-2">
                   Full Name
