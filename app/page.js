@@ -1,6 +1,7 @@
 "use client"
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import { AiFillTwitterCircle, AiFillLinkedin, AiFillGithub } from "react-icons/ai"
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai"
+import { BsTwitterX } from "react-icons/bs";
 import Image from "next/image";
 import { TypeAnimation } from 'react-type-animation';
 import React from "react";
@@ -87,7 +88,7 @@ export default function Home() {
           <p className="text-md py-3 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-white">Freelancer providing services for programming and design needs. Join me down below and let&apos;s get cracking!</p>
         </div>
         <div className="text-5xl flex justify-center gap-16 py-2 text-gray-600 dark:text-white">
-          <AiFillTwitterCircle onClick={handletwitterClick} className="cursor-pointer" />
+          <BsTwitterX onClick={handletwitterClick} className="cursor-pointer" />
           <AiFillLinkedin onClick={handlelinkedinClick} className="cursor-pointer"/>
           <AiFillGithub onClick={handlegithubClick} className="cursor-pointer"/>
         </div>
