@@ -10,7 +10,7 @@ import { useState , useEffect } from "react";
 export default function Home() {
     const [darkMode, setDarkMode] = useState(false)
     const handleResumeClick =()=>{
-   window.open("/ASHUTOSH MOHANTY.pdf","_blank")
+   window.open("/Ashutosh_Mohanty_Final_Resume.pdf","_blank")
         
     }
     const handleproj2Click =()=>{
