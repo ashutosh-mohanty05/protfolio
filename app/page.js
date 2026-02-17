@@ -2,6 +2,7 @@
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai"
 import { BsTwitterX } from "react-icons/bs";
+import { FaArrowUp } from "react-icons/fa";
 import Image from "next/image";
 import { TypeAnimation } from 'react-type-animation';
 import React from "react";
@@ -34,12 +35,19 @@ export default function Home() {
   
   const [isVisible, setIsVisible] = useState(false);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
+const scrollToTop = () => {
+  // lock scroll temporarily
+  document.body.style.overflow = "hidden";
+
+  // instant jump to top
+  window.scrollTo(0, 0);
+
+  // unlock scroll after jump
+  setTimeout(() => {
+    document.body.style.overflow = "auto";
+  }, 50);
+};
+
   useEffect(()=>{
     const toggleVisibility=()=>{
       setIsVisible(window.pageYOffset > 300); 
@@ -267,13 +275,12 @@ I also have experience with <span className="text-teal-500">Linux</span>, <span 
       </div>
      
       <button
-      className={`${
-        isVisible ? 'block':'hidden'
-      }fixed bottom-10 right-1/2 -translate-x-1/2 bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none`}
-      onClick={scrollToTop}
-      >
-        ^
-      </button>
+  onClick={scrollToTop}
+  className="fixed bottom-6 right-6 z-50 bg-teal-500 hover:bg-teal-600 text-white p-3 rounded-full shadow-lg hover:scale-110 transition"
+>
+  <FaArrowUp />
+</button>
+
 
     </main>
     </div>
