@@ -272,18 +272,17 @@ I also have experience with <span className="text-teal-500">Linux</span>, <span 
      
      <button
   onClick={scrollToTop}
-  className={`
-    fixed bottom-6 right-6
-    z-50
-    transition-all duration-300 ease-in-out
-    ${isVisible ? "opacity-100 visible" : "opacity-0 invisible"}
-    bg-teal-500 hover:bg-teal-600
-    text-white
-    p-3
-    rounded-full
-    shadow-lg hover:shadow-xl
-    hover:scale-110 active:scale-95
-  `}
+ className={`
+  fixed bottom-6 right-6 z-50
+  ${isVisible ? "opacity-100 visible" : "opacity-0 invisible"}
+  transition-all duration-300
+  bg-teal-500/90 backdrop-blur-md
+  hover:bg-teal-600
+  text-white
+  p-3 rounded-full
+  shadow-lg hover:shadow-xl
+  hover:scale-110
+`}
   aria-label="Scroll to top"
 >
   <FaArrowUp size={18} />
