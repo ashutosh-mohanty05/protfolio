@@ -42,13 +42,9 @@ const scrollToTop = () => {
   });
 };
 
-  useEffect(() => {
+useEffect(() => {
   const toggleVisibility = () => {
-    if (window.scrollY > 50) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
+    setIsVisible(window.scrollY > 0);
   };
 
   window.addEventListener("scroll", toggleVisibility);
@@ -57,6 +53,7 @@ const scrollToTop = () => {
     window.removeEventListener("scroll", toggleVisibility);
   };
 }, []);
+
   return (
    <div className={darkMode ? 'dark':""}>
     <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
