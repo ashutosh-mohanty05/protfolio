@@ -36,28 +36,27 @@ export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
 
 const scrollToTop = () => {
-  // lock scroll temporarily
-  document.body.style.overflow = "hidden";
-
-  // instant jump to top
-  window.scrollTo(0, 0);
-
-  // unlock scroll after jump
-  setTimeout(() => {
-    document.body.style.overflow = "auto";
-  }, 50);
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 };
 
-  useEffect(()=>{
-    const toggleVisibility=()=>{
-      setIsVisible(window.pageYOffset > 300); 
+  useEffect(() => {
+  const toggleVisibility = () => {
+    if (window.scrollY > 50) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
     }
-    window.addEventListener('scroll',toggleVisibility)
+  };
 
-  return ()=>{
-    window.removeEventListener('scroll',toggleVisibility)
-  }
-    },[])
+  window.addEventListener("scroll", toggleVisibility);
+
+  return () => {
+    window.removeEventListener("scroll", toggleVisibility);
+  };
+}, []);
   return (
    <div className={darkMode ? 'dark':""}>
     <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
