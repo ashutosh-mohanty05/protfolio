@@ -111,8 +111,6 @@ I specialize in <span className="text-teal-500">AWS Cloud Infrastructure</span>,
 I also have experience with <span className="text-teal-500">Linux</span>, <span className="text-teal-500">DevOps practices</span>, and building scalable applications using modern technologies.
 </p>
 
-
-          </p>
         </div>
       <div className="lg:flex gap-10">
 
