@@ -106,10 +106,11 @@ AWS Engineer with hands-on experience in cloud infrastructure, monitoring and tr
           <h3 className="text-2xl py-1 dark:text-white">What I Do</h3>
 
 <p className="text-sm py-2 leading-8 text-gray-800 dark:text-white ">
-I specialize in <span className="text-teal-500">AWS Cloud Infrastructure</span>, monitoring, troubleshooting, and maintaining highly available systems. Experienced in working with cloud environments, incident management, system reliability, and operational excellence.
+I specialize in <span className="text-teal-500">AWS Cloud Infrastructure</span>, monitoring, troubleshooting, and maintaining highly available systems.
 
 I also have experience with <span className="text-teal-500">Linux</span>, <span className="text-teal-500">DevOps practices</span>, and building scalable applications using modern technologies.
 </p>
+
 
           </p>
         </div>
