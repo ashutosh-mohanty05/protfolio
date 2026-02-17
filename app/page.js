@@ -72,11 +72,13 @@ export default function Home() {
           <h3 className="text py-2 md:text-xl"> <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed out once, initially
-              'Engineer-Cloud and Infra',
+              'Cloud Engineer',
               1000, // wait 1s before replacing "Mice" with "Hamsters"
               'Web Developer',
               1000,
               'Amazon Web Service',
+              1000,
+              'AWS Certified Solutions Architect – Associate',
               1000,
 
             ]}
@@ -85,7 +87,10 @@ export default function Home() {
             style={{ fontSize: '2em', display: 'inline-block' }}
             repeat={Infinity}
           /></h3>
-          <p className="text-md py-3 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-white">Freelancer providing services for programming and design needs. Join me down below and let&apos;s get cracking!</p>
+          <p className="text-md py-3 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-white">
+AWS Engineer with hands-on experience in cloud infrastructure, monitoring and troubleshooting production environments. AWS Certified Solutions Architect – Associate with strong skills in AWS, Linux, and cloud operations. Passionate about building scalable, reliable, and efficient cloud solutions.
+</p>
+
         </div>
         <div className="text-5xl flex justify-center gap-16 py-2 text-gray-600 dark:text-white">
           <BsTwitterX onClick={handletwitterClick} className="cursor-pointer" />
@@ -98,28 +103,65 @@ export default function Home() {
       </section>
       <section>
         <div>
-          <h3 className="text-2xl py-1 dark:text-white">What Can I Add ?</h3>
-          <p className="text-sm py-2 leading-8 text-gray-800 dark:text-white ">
-            I can bring a strong foundation in building interactive and visually appealing user interfaces. My Experties extends to utilizing <span className="text-teal-500">React.js</span> for frontend development and integrating it seamlessly with <span className="text-teal-500">MongoDB</span>,<span className="text-teal-500">Express.JS</span> and <span className="text-teal-500">Node.js</span> on the backend.
+          <h3 className="text-2xl py-1 dark:text-white">What I Do</h3>
+
+<p className="text-sm py-2 leading-8 text-gray-800 dark:text-white ">
+I specialize in <span className="text-teal-500">AWS Cloud Infrastructure</span>, monitoring, troubleshooting, and maintaining highly available systems. Experienced in working with cloud environments, incident management, system reliability, and operational excellence.
+
+I also have experience with <span className="text-teal-500">Linux</span>, <span className="text-teal-500">DevOps practices</span>, and building scalable applications using modern technologies.
+</p>
+
           </p>
         </div>
-        <div className="lg:flex gap-10">
-          <div className="text-center shadow-lg p-10 rounded-xl hover:translate-y-2 dark:bg-white">
-            <Image src={"/react.png"} alt="" width={100} height={100} className="rounded-2xl m-auto relative overflow-hidden" />
-            <h6 className="text-lg font-medium pt-8 pb-2">Beautiful UI with React</h6>
-            <p className="text-sm text-gray-600">Proficient in building dynamic, responsive UIs with clean, optimized code. Focused on delivering exceptional user experiences.</p>
-          </div>
-          <div className="text-center shadow-lg p-10 rounded-xl hover:translate-y-2 dark:bg-white">
-            <Image src={"/next.svg"} alt="" width={100} height={100} className="rounded-2xl m-auto relative overflow-hidden " />
-            <h6 className="text-lg font-medium pt-8 pb-2">Next.js 13 Utilization</h6>
-            <p className="text-sm text-gray-600">Route and component with next.js combined with efficient code design for seamless deployment and intuitive user experience.</p>
-          </div>
-          <div className="text-center shadow-lg p-10 rounded-xl hover:translate-y-2 dark:bg-white">
-            <Image src={"/hash.svg"} alt="" width={100} height={100} className="rounded-2xl m-auto relative overflow-hidden" />
-            <h6 className="text-lg font-medium pt-8 pb-2">Custom Code and Deploy</h6>
-            <p className="text-sm text-gray-600">Streamlined, scalable code architecture designed for ease of deployment and efficient management.</p>
-          </div>
-        </div>
+      <div className="lg:flex gap-10">
+
+  {/* AWS Card */}
+  <div className="text-center shadow-lg p-10 rounded-xl hover:translate-y-2 dark:bg-white">
+    <Image
+      src="/aws.png"
+      alt="AWS Logo"
+      width={100}
+      height={100}
+      className="rounded-2xl m-auto"
+    />
+    <h6 className="text-lg font-medium pt-8 pb-2">AWS Cloud</h6>
+    <p className="text-sm text-gray-600">
+      Experience with AWS cloud infrastructure, monitoring, troubleshooting, and maintaining reliable and scalable cloud environments. AWS Certified Solutions Architect – Associate.
+    </p>
+  </div>
+
+  {/* React Card */}
+  <div className="text-center shadow-lg p-10 rounded-xl hover:translate-y-2 dark:bg-white">
+    <Image
+      src="/react.png"
+      alt="React Logo"
+      width={100}
+      height={100}
+      className="rounded-2xl m-auto"
+    />
+    <h6 className="text-lg font-medium pt-8 pb-2">React.js Development</h6>
+    <p className="text-sm text-gray-600">
+      Skilled in building modern, responsive, and interactive user interfaces using React with clean architecture and reusable components.
+    </p>
+  </div>
+
+  {/* Next.js Card */}
+  <div className="text-center shadow-lg p-10 rounded-xl hover:translate-y-2 dark:bg-white">
+    <Image
+      src="/next.svg"
+      alt="Next.js Logo"
+      width={100}
+      height={100}
+      className="rounded-2xl m-auto"
+    />
+    <h6 className="text-lg font-medium pt-8 pb-2">Next.js Framework</h6>
+    <p className="text-sm text-gray-600">
+      Experience in building production-ready applications using Next.js with optimized performance, routing, and deployment on cloud platforms.
+    </p>
+  </div>
+
+</div>
+
       </section>
 
       <section>
