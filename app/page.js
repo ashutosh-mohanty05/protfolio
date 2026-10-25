@@ -115,7 +115,7 @@ const PROJECTS = [
     title: "Job Seeking Platform (JobZee)",
     desc: "MERN-based job portal with JWT and Google authentication, resume upload, an employer dashboard and AI-powered job assistance.",
     tags: ["React", "Node.js", "MongoDB", "Tailwind"],
-    image: "/jobzee.jpg",
+    image: "/jobzee.png",
     href: JOBZEE_URL,
   },
   {
