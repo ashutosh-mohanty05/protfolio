@@ -11,8 +11,13 @@ const oswald = Oswald({
 
 export const metadata = {
   title: "Ashutosh Mohanty | AWS Cloud Engineer",
-  description:
-    "Portfolio of Ashutosh Mohanty - AWS Certified Solutions Architect, Azure Administrator (AZ-104), Cloud Engineer and Web Developer.",
+  description: "Portfolio of Ashutosh Mohanty - ...",
+  metadataBase: new URL("https://protfolio-five-chi.vercel.app"),
+  openGraph: {
+    title: "Ashutosh Mohanty | AWS Cloud Engineer",
+    description: "AWS Certified Solutions Architect, Azure Administrator and Web Developer.",
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({ children }) {
