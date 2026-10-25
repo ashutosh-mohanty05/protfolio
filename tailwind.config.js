@@ -13,6 +13,7 @@ module.exports = {
     extend: {
       fontFamily:{
        burtons:"burtons",
+       display:["var(--font-display)","Impact","sans-serif"],
       },
     },
   },
